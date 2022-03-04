@@ -37,4 +37,4 @@ msg = f"#Encasillado del " + str(datetime.datetime.today().day) + "/" + str(date
 
 # Publicamos el tweet
 client.create_tweet(text=msg)
-print("\nTWEET CREATED AND PUBLISHED")
+#print("\nTWEET CREATED AND PUBLISHED")
