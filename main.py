@@ -16,9 +16,8 @@ json_len = len(data)
 print("json_len = " + str(json_len))
 
 
-#int(datetime.date.day) * int(datetime.date.month) * int(datetime.date.year)
 todayIndex = 0
-todayIndex = round((3.14159265359 * 2 * 1000) % json_len) - 1
+todayIndex = round((3.14159265359 * datetime.datetime.today().day * datetime.datetime.today().month * datetime.datetime.today().year * 1000) % json_len) - 1
 print("today_index = " + str(todayIndex))
 
 wotd = "N/A"
