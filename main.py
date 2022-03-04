@@ -1,6 +1,6 @@
 import tweepy
 import json
-import random
+import datetime
 
 from Twitter_Files.tw_credentials import *
 
@@ -16,23 +16,20 @@ auth.set_access_token(apiKey, apiKeySecret)
 api = tweepy.API(auth)
 
 # Se calcula la palabra del dia
+json_len = len(data)
+print("json_len = " + json_len)
 
-#CALCULAR
+todayIndex = 0
+todayIndex = round((3.14159265359 * datetime.date.day * datetime.date.month * datetime.date.year * 1000) % json_len) - 1
+print("today_index = " + todayIndex)
 
-# borrar:
-today_index = 0
-while data[today_index]['appear'] == "True":
-    today_index = int(random.uniform(0, len(data)))
-    if data[today_index]['appear'] == "False":
-        data[today_index]['appear'] = "True"
-        break
-
-# Abrimos el archivo json con permisos para escritura
-with open('word_database.json', 'w') as f:
-    f.write(json.dumps(data, sort_keys=True, indent=4, separators=(',', ': ')))
+wotd = "N/A"
+wotd = {data[todayIndex]['word']}
+print("wotd = " + wotd)
 
 # Guardamos el mensaje final
-msg = f"¡El Encasillado de hoy ha sido {data[today_index]['word']}!"
+msg = f"¡El Encasillado de hoy ha sido " + wotd + "!"
+print(msg)
 
 # Tuiteamos el resultado final pasándole el parámetro de mensaje y la imagen.
 api.update_status(msg)
