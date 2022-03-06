@@ -39,4 +39,4 @@ print("\nTWEET CREATED AND PUBLISHED SUCCESSFULLY")
 
 with open("bot_log.log", "a") as logFile:
  logFile.write(str(datetime.datetime.today().day) + "/" + str(datetime.datetime.today().month) + "/" +
-               str(datetime.datetime.today().year) + " - " + wotd + "a\n")
+               str(datetime.datetime.today().year) + " - " + wotd + "\n")
