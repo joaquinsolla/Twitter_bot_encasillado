@@ -23,6 +23,8 @@ json_len = len(data)
 todayIndex = 0
 todayIndex = round((3.14159265359 * datetime.datetime.today().day * datetime.datetime.today().month *
                     datetime.datetime.today().year * 1000) % json_len) - 1
+print(" - Today index: " + str(todayIndex))
+
 wotd = "N/A"
 wotd = data[todayIndex]['word']
 print(" + WOTD: " + wotd)
