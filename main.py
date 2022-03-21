@@ -36,7 +36,7 @@ msg = f"#Encasillado del " + str(datetime.datetime.today().day) + "/" + str(date
 print(" + MESSAGE: " + msg)
 
 # Publicamos el tweet
-#client.create_tweet(text=msg)
+client.create_tweet(text=msg)
 print("\nTWEET CREATED AND PUBLISHED SUCCESSFULLY")
 
 with open("bot_log.log", "a") as logFile:
