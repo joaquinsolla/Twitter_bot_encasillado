@@ -4,7 +4,7 @@ import datetime
 
 from tw_credentials import *
 
-# VERSION DE APP
+# VERSION DE APP (Next: 1.1.1)
 appVersion = "1.0.6"
 print("Encasillado Bot - App-version: " + appVersion)
 
