@@ -5,12 +5,12 @@ import datetime
 from tw_credentials import *
 
 # VERSION DE APP
-appVersion = "1.0.5"
+appVersion = "1.0.6"
 print("Encasillado Bot - App-version: " + appVersion)
 
 # Abrimos el archivo json
 print(" - Opening json . . .")
-with open('word_database.json') as f:
+with open('current_database.json') as f:
     data = json.load(f)
 
 # Nos autenticamos en Twitter e iniciamos el cliente
@@ -36,7 +36,7 @@ msg = f"#Encasillado del " + str(datetime.datetime.today().day) + "/" + str(date
 print(" + MESSAGE: " + msg)
 
 # Publicamos el tweet
-client.create_tweet(text=msg)
+#client.create_tweet(text=msg)
 print("\nTWEET CREATED AND PUBLISHED SUCCESSFULLY")
 
 with open("bot_log.log", "a") as logFile:
