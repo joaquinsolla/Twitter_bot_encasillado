@@ -4,8 +4,8 @@ import datetime
 
 from tw_credentials import *
 
-# VERSION DE APP (Next: 1.1.5)
-appVersion = "1.1.1"
+# VERSION DE APP (Next: -)
+appVersion = "1.1.5"
 print("Encasillado Bot - App-version: " + appVersion)
 
 # Abrimos el archivo json
